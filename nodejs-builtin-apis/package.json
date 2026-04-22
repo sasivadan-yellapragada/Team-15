@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-builtin-apis-demo",
+  "version": "1.0.0",
+  "description": "Exercise 7 — Node.js built-in APIs (HTTP, FS, Path, URL) without Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["nodejs", "http", "fs", "path", "url", "no-express"],
+  "license": "MIT"
+}

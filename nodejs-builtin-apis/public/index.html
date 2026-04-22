@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 7 — Node built-ins (no Express)</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Exercise 7: Node.js only</h1>
+    <p class="muted">Server uses <code>http</code>, <code>fs</code>, <code>path</code>, and <code>url</code> — no Express.</p>
+    <section>
+      <h2>Notes (GET /api/notes)</h2>
+      <ul id="list"></ul>
+      <form id="form">
+        <input id="text" type="text" placeholder="Note text" required />
+        <button type="submit">POST /api/notes</button>
+      </form>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

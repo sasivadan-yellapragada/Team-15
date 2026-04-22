@@ -1,0 +1,27 @@
+{
+  "name": "smart-campus-utils",
+  "version": "1.0.0",
+  "description": "Smart Campus Management System - Utility Functions for Student Operations",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "test": "node index.js"
+  },
+  "keywords": [
+    "campus",
+    "management",
+    "students",
+    "utilities"
+  ],
+  "author": "Smart Campus Team",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "moment": "^2.29.4",
+    "axios": "^1.6.2"
+  }
+}
