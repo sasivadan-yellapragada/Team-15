@@ -610,7 +610,7 @@ export default function Tutorials() {
               {!ex8Items.length ? <li>No items yet.</li> : null}
             </ul>
             <div style={{ marginTop: 12 }} className="sc-muted sc-sm">
-              Code: <code>smart-campus-portal/server/server.js</code> and file <code>server/data/tutorial-ex8-items.json</code>
+              Code: <code>smart-campus-portal/backend/server.js</code> and file <code>backend/data/tutorial-ex8-items.json</code>
             </div>
           </Card>
         )}

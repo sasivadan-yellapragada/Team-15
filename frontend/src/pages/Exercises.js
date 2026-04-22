@@ -202,8 +202,8 @@ function Exercise8ExpressFsDemo() {
   return (
     <div className="sc-stack">
       <div className="sc-muted sc-sm">
-        Backend: Express routes in <code>server/server.js</code> (<code>GET/POST /tutorial/ex8/items</code>) read and write{' '}
-        <code>server/data/tutorial-ex8-items.json</code> using Node <code>fs</code> and <code>path</code>.
+        Backend: Express routes in <code>backend/server.js</code> (<code>GET/POST /tutorial/ex8/items</code>) read and write{' '}
+        <code>backend/data/tutorial-ex8-items.json</code> using Node <code>fs</code> and <code>path</code>.
       </div>
       {err ? <div className="sc-textDanger sc-sm">{err}</div> : null}
       <form className="sc-row" onSubmit={add}>
@@ -297,5 +297,4 @@ export default function Exercises() {
     </div>
   );
 }
-
 

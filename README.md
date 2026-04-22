@@ -6,8 +6,8 @@ Smart Campus Portal is a full-stack MERN-style campus management project built f
 
 ```text
 Team-15/
-├── client/                 # React frontend
-├── server/                 # Express backend + MongoDB models/routes
+├── frontend/               # React frontend
+├── backend/                # Express backend + MongoDB models/routes
 ├── nodejs-builtin-apis/    # Extra Node.js built-ins exercise app
 ├── npm-project/            # Custom npm module exercise
 ├── docs/                   # Exercise documentation
@@ -45,14 +45,14 @@ cd Team-15
 
 ```bash
 npm install
-npm --prefix client install
-npm --prefix server install
+npm --prefix frontend install
+npm --prefix backend install
 npm --prefix nodejs-builtin-apis install
 ```
 
 ### 3. Configure environment variables
 
-Create `server/.env` with:
+Create `backend/.env` with:
 
 ```env
 PORT=5001
@@ -84,6 +84,13 @@ This starts:
 ```bash
 npm run dev:server
 npm run dev:client
+```
+
+Or use the renamed scripts:
+
+```bash
+npm run dev:backend
+npm run dev:frontend
 ```
 
 ## API Endpoints
@@ -138,5 +145,5 @@ You can directly open these in the browser after starting the backend:
 ## Notes
 
 - `.gitignore` excludes `node_modules`, `.env`, logs, and local MongoDB data.
-- Uploaded team member images are stored in `server/uploads/team-members/`.
+- Uploaded team member images are stored in `backend/uploads/team-members/`.
 - The repository is intended for public GitHub submission under the team name `Team-15`.

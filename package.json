@@ -3,13 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev:server": "npm --prefix server run dev",
-    "dev:client": "npm --prefix client start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend start",
+    "dev:server": "npm run dev:backend",
+    "dev:client": "npm run dev:frontend",
     "dev:ex7": "npm --prefix nodejs-builtin-apis start",
-    "dev": "npx concurrently -n SERVER,CLIENT,EX7 -c green,cyan,magenta \"npm run dev:server\" \"npm run dev:client\" \"npm run dev:ex7\""
+    "dev": "npx concurrently -n BACKEND,FRONTEND,EX7 -c green,cyan,magenta \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:ex7\""
   },
   "devDependencies": {
     "concurrently": "^9.2.0"
   }
 }
-
