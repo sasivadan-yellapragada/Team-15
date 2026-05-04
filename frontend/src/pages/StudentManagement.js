@@ -27,7 +27,7 @@ const StudentManagement = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/students');
+      const response = await fetch('/api/students');
       const data = await response.json();
       if (data.status === 'success') {
         setStudents(data.data);
@@ -69,7 +69,7 @@ const StudentManagement = () => {
     try {
       if (editingId) {
         // Update existing student
-        const response = await fetch(`http://localhost:5001/api/students/${editingId}`, {
+        const response = await fetch(`/api/students/${editingId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -84,7 +84,7 @@ const StudentManagement = () => {
         }
       } else {
         // Add new student
-        const response = await fetch('http://localhost:5001/api/students', {
+        const response = await fetch('/api/students', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -124,7 +124,7 @@ const StudentManagement = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this student?')) {
       try {
-        const response = await fetch(`http://localhost:5001/api/students/${id}`, {
+        const response = await fetch(`/api/students/${id}`, {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' }
         });

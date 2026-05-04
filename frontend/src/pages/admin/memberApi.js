@@ -51,7 +51,5 @@ export function validateMember(value) {
 export function memberPhotoSrc(photoUrl) {
   if (!photoUrl) return '';
   if (/^https?:\/\//i.test(photoUrl)) return photoUrl;
-  const protocol = window.location.protocol;
-  const host = window.location.hostname;
-  return `${protocol}//${host}:5001${photoUrl}`;
+  return photoUrl;
 }

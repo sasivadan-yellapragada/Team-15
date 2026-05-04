@@ -21,7 +21,7 @@ const Operations = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/students');
+      const response = await fetch('/api/students');
       const data = await response.json();
       if (data.status === 'success') {
         setStudents(data.data);
@@ -79,7 +79,7 @@ const Operations = () => {
         attendance: nextAttendance,
       };
 
-      const response = await fetch(`http://localhost:5001/api/students/${selectedStudent._id}`, {
+      const response = await fetch(`/api/students/${selectedStudent._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -103,7 +103,7 @@ const Operations = () => {
   const handleDelete = async (student) => {
     try {
       if (!student?._id) return;
-      const response = await fetch(`http://localhost:5001/api/students/${student._id}`, {
+      const response = await fetch(`/api/students/${student._id}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' }
       });

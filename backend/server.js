@@ -34,7 +34,9 @@ const upload = multer({
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: process.env.NODE_ENV === 'production'
+    ? process.env.FRONTEND_URL
+    : process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true
 }));
 app.use('/uploads', express.static(UPLOADS_DIR));
@@ -943,6 +945,15 @@ async function seedAdminIfNeeded() {
   const { salt, hash } = hashPassword(password);
   await AdminUser.create({ name: 'Campus Admin', email, passwordHash: hash, passwordSalt: salt });
   console.log('✅ Admin user seeded');
+}
+
+const FRONTEND_BUILD_DIR = path.join(__dirname, '..', 'frontend', 'build');
+
+if (process.env.NODE_ENV === 'production' && fs.existsSync(FRONTEND_BUILD_DIR)) {
+  app.use(express.static(FRONTEND_BUILD_DIR));
+  app.get('*', (_req, res) => {
+    res.sendFile(path.join(FRONTEND_BUILD_DIR, 'index.html'));
+  });
 }
 
 async function start() {

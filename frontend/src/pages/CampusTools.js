@@ -20,7 +20,7 @@ const CampusTools = () => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/students');
+      const response = await fetch('/api/students');
       const data = await response.json();
       if (data.status === 'success') {
         // Transform MongoDB student format to match CampusTools format
